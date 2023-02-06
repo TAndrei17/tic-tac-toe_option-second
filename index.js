@@ -1,4 +1,3 @@
-// const goToPlay = () => {
   const getTable = document.querySelector('.game');
   let cellText = 'X';
   getTable.addEventListener('click', (event) => {
@@ -10,4 +9,3 @@
       cellText = (cellText === 'X') ? 'O' : 'X';
     }
   });
-// };
