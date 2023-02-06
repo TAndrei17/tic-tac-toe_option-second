@@ -1,0 +1,15 @@
+{
+  "name": "the-first-game",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "self-education",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrei Trunkin",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
