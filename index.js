@@ -1,3 +1,5 @@
+// import play from './scrypt.js';
+
 const createField = () => {
   const tableBox = document.createElement('table');
   tableBox.classList.add('game');
