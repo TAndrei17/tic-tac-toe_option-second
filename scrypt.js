@@ -1,20 +1,4 @@
-// import play from './scrypt.js';
-
-const createField = () => {
-  const tableBox = document.createElement('table');
-  tableBox.classList.add('game');
-  for (let i = 0; i < 3; i += 1) {
-    const str = tableBox.insertRow();
-    str.classList.add('line');
-    for (let j = 0; j < 3; j += 1) {
-      const cell = str.insertCell();
-      cell.classList.add('cell');
-      cell.setAttribute('cellNum', j);
-      // console.log(cell);
-    }
-  }
-  return tableBox;
-};
+import { createField } from './field_cell.js';
 
 const goToPlay = () => {
   const tableAll = createField();
