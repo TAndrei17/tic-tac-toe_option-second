@@ -23,21 +23,20 @@ const checkColumns = (array) => {
 };
 
 const checkDiagonal = (array) => {
-  const isDiagLeftFull = array.filter((cell1) => { // обхожу каждый объект
-    const sampleArray1 = [[1, 1], [2, 2], [3, 3]];
-    const getCellValues1 = Object.values(cell1); // получаю его ключи
-    const [a, b] = getCellValues1; // вытаскиваю ключи
-    const compArray1 = sampleArray1.filter((sample1) => sample1.includes(a) && sample1.includes(b));
-    return compArray1.length > 0;
+  const isDiagLeftFull = array.filter((cell) => {
+    const example = [[1, 1], [2, 2], [3, 3]];
+    const a = getRow(cell);
+    const b = getColumn(cell);
+    const compArray = example.filter((sample) => sample.includes(a) && sample.includes(b));
+    return compArray.length > 0;
   });
-  const isDiagRightFull = array.filter((cell2) => { // обхожу каждый объект
-    const sampleArray2 = [[3, 1], [2, 2], [1, 3]];
-    const getCellValues2 = Object.values(cell2); // получаю его ключи
-    const [a, b] = getCellValues2; // вытаскиваю ключи
-    const compArray2 = sampleArray2.filter((sample2) => sample2.includes(a) && sample2.includes(b));
-    return compArray2.length > 0;
+  const isDiagRightFull = array.filter((cell) => {
+    const example = [[3, 1], [2, 2], [1, 3]];
+    const a = getRow(cell);
+    const b = getColumn(cell);
+    const compArray = example.filter((sample) => (sample[0] === a && sample[1] === b));
+    return compArray.length > 0;
   });
-
   return isDiagLeftFull.length === 3 || isDiagRightFull.length === 3;
 };
 
