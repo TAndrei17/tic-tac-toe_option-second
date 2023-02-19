@@ -1,5 +1,6 @@
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100vw;
@@ -9,16 +10,41 @@ body {
 }
 
 .game {
-  background-color: #ffed73;
+  background-color: #ffba40;
   border-collapse: collapse;
 }
 .cell {
   width: 120px;
   height: 120px;
-  color: #7080d7;
+  color: #fa3e54;
   font-size: 90px;
   text-align: center;
-  border-color: #bd63d4;
+  border-color: #34d0b6;
   border-width: 3px;
   border-style: solid;
+}
+
+.step {
+  font: italic 45px Roboto, sens-serif;
+  color: #fa3e54;
+}
+
+.winner div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fa3e54;
+  text-align: center;
+  font-weight: 700;
+}
+
+.winner div button {
+  background: #fa3e54;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
 }
