@@ -11,4 +11,10 @@ const createFinalDiv = (str) => {
   return divWinner;
 };
 
-export default createFinalDiv;
+const createButtonReload = () => {
+  const butt = document.querySelector('div > button');
+  butt.addEventListener('click', () => document.location.reload());
+  return butt;
+};
+
+export { createFinalDiv, createButtonReload };
