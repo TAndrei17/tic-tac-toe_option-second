@@ -6,7 +6,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  font: bold 20px Roboto, sans-serif;
+  font: bold 50px Roboto, sans-serif;
 }
 
 .game {
@@ -25,8 +25,8 @@ body {
 }
 
 .step {
-  font: italic 45px Roboto, sens-serif;
   color: #fa3e54;
+  margin: 20px;
 }
 
 .winner div {
