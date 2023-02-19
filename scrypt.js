@@ -2,7 +2,6 @@ import createField from './field_cell.js';
 import { createFinalDiv, createButtonReload } from './final_div.js';
 import {
   createCell,
-  // collectCells,
   checkRows,
   checkColumns,
   checkDiagonal,
@@ -25,7 +24,6 @@ const startPlay = () => {
     const eventRow = event.target.row;
     const eventColumn = event.target.column;
     const eventCell = createCell(eventRow, eventColumn);
-    console.log(eventCell);
     if (target.textContent === '') {
       target.textContent = cellText;
     }
