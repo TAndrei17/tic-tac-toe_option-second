@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/ebc375e1de549ea1fe6d/maintainability)](https://codeclimate.com/github/TAndrei17/tic-tac-toe_option-second/maintainability)
+
 # The-game. Tic-Tac-Toe. Option 2
 
 ['Tic-Tac-Toe' is a simple game for two people on one field.](https://tandrei17.github.io/tic-tac-toe_option-second/ "To GitHub pages")
