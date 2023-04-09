@@ -5,7 +5,7 @@ import {
   checkRows,
   checkColumns,
   checkDiagonal,
-} from '../my_abstractions.js';
+} from '../game_logic/interfaces.js';
 
 test('cteateCell', () => {
   expect(createCell(1, 1)).toMatchObject({ row: 1, column: 1 });
