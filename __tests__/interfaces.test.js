@@ -15,12 +15,12 @@ test('cteateCell', () => {
 
 test('getRow', () => {
   expect(getRow(createCell(1, 1))).toEqual(1);
-  expect(getRow(createCell(0, 0))).toEqual(0);
+  expect(getRow(createCell(2, 2))).toEqual(2);
 });
 
 test('getColumn', () => {
   expect(getColumn(createCell(1, 3))).toEqual(3);
-  expect(getColumn(createCell(0, 0))).toEqual(0);
+  expect(getColumn(createCell(3, 3))).toEqual(3);
 });
 
 test('checkRows', () => {
@@ -31,10 +31,6 @@ test('checkRows', () => {
     checkRows([createCell(1, 1), createCell(2, 1), createCell(1, 3)]),
   ).toEqual(false);
   expect(checkRows([createCell(1, 1), createCell(1, 3)])).toEqual(false);
-  // decided below problem in 'scrypt.js' but it's possible to decide in 'my_abstractions.js' too;
-  // abstraction functions could to filter repeted elements of array,
-  // but i use [...allXs, ...allOs].length for finishing in case of draw,
-  // that reason filter repeted cells in the moment of 'click.event'
   expect(
     checkRows([createCell(1, 1), createCell(1, 1), createCell(1, 1)]),
   ).toEqual(true);
@@ -42,16 +38,12 @@ test('checkRows', () => {
 
 test('checkColumns', () => {
   expect(
-    checkColumns([createCell(1, 1), createCell(2, 1), createCell(3, 1)]),
+    checkColumns([createCell(1, 3), createCell(2, 3), createCell(3, 3)]),
   ).toEqual(true);
   expect(
     checkColumns([createCell(1, 1), createCell(2, 1), createCell(3, 2)]),
   ).toEqual(false);
   expect(checkColumns([createCell(1, 1), createCell(2, 1)])).toEqual(false);
-  // decided below problem in 'scrypt.js' but it's possible to decide in 'my_abstractions.js' too;
-  // abstraction functions could to filter repeted elements of array,
-  // but i use [...allXs, ...allOs].length for finishing in case of draw,
-  // that reason filter repeted cells in the moment of 'click.event'
   expect(
     checkColumns([createCell(1, 1), createCell(1, 1), createCell(1, 1)]),
   ).toEqual(true);
@@ -71,10 +63,6 @@ test('checkDiagonal', () => {
     checkColumns([createCell(1, 3), createCell(2, 2), createCell(3, 3)]),
   ).toEqual(false);
   expect(checkColumns([createCell(1, 3), createCell(2, 2)])).toEqual(false);
-  // decided below problem in 'scrypt.js' but it's possible to decide in 'my_abstractions.js' too;
-  // abstraction functions could to filter repeted elements of array,
-  // but i use [...allXs, ...allOs].length for finishing in case of draw,
-  // that reason filter repeted cells in the moment of 'click.event'
   expect(
     checkColumns([createCell(1, 3), createCell(1, 3), createCell(1, 3)]),
   ).toEqual(true);

@@ -28,11 +28,7 @@ const checkColumns = (array) => {
 
 const checkDiagonal = (array) => {
   const isDiagLeftFull = array.filter((cell) => {
-    const example = [
-      [1, 1],
-      [2, 2],
-      [3, 3],
-    ];
+    const example = [[1, 1], [2, 2], [3, 3]];
     const a = getRow(cell);
     const b = getColumn(cell);
     const compArray = example.filter(
@@ -41,11 +37,7 @@ const checkDiagonal = (array) => {
     return compArray.length > 0;
   });
   const isDiagRightFull = array.filter((cell) => {
-    const example = [
-      [3, 1],
-      [2, 2],
-      [1, 3],
-    ];
+    const example = [[3, 1], [2, 2], [1, 3]];
     const a = getRow(cell);
     const b = getColumn(cell);
     const compArray = example.filter(
