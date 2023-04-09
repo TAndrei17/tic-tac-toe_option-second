@@ -16,6 +16,6 @@ It is my second project as a front-end developer. My purpose was to apply my ski
 - Polished skills of testing functions by the Jest framework.
 - Checked the code by Jest on the command line.
 
-The main idea of this code is to use the properties of DOM-elements to parsing and finding the winner. At the moment of formation the playing field each cell (‘td’ element) acquires 'row' and 'column' properties. In the base code (scrypt.js), these properties are retrieved and used to pass to the 'createCell()' abstraction. Data processing occurs mainly with help of abstractions are located in the file 'my_abstractions.js'
+The main idea of this code is to use the properties of DOM-elements to parsing and finding the winner. At the moment of formation the playing field each cell (‘td’ element) acquires 'row' and 'column' properties. In the base code (scrypt.js), these properties are retrieved and used to pass to the 'createCell()' abstraction. Data processing occurs mainly with help of abstractions are located in the file 'interfaces.js'
 
 AT
