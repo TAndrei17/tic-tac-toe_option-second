@@ -9,9 +9,9 @@ import {
 let cellText = 'X';
 const allXs = [];
 const allOs = [];
+const divRoot = document.querySelector('.container');
 
 const startPlay = () => {
-  const divRoot = document.querySelector('.container');
   const field = createField();
   divRoot.append(field);
   const turn = createTurn();
@@ -35,8 +35,7 @@ const startPlay = () => {
       if (checkX) {
         allXs.push(eventCell);
       }
-    }
-    if (target.textContent === 'O') {
+    } else if (target.textContent === 'O') {
       const checkO = isControlArrayEmpty(eventCell, allOs);
       if (checkO) {
         allOs.push(eventCell);
@@ -46,9 +45,7 @@ const startPlay = () => {
     if (isWinner(allXs)) {
       turn.remove();
       showWinner('X', divRoot, field);
-    }
-
-    if (isWinner(allOs)) {
+    } else if (isWinner(allOs)) {
       turn.remove();
       showWinner('O', divRoot, field);
     }
