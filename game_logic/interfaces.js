@@ -23,18 +23,6 @@ const checkRowsColumns = (array) => {
   return (isRowFull.length > 0 || isColumnFull.length > 0) === true;
 };
 
-/* const checkColumns = (array) => {
-  const calcRowsInColumn = array.reduce((acc, cell) => {
-    const column = getColumn(cell);
-    acc[column] = acc[column] ? acc[column] + 1 : 1;
-    return acc;
-  }, {});
-  const isColumnFull = Object.keys(calcRowsInColumn).filter(
-    (item) => calcRowsInColumn[item] === 3,
-  );
-  return isColumnFull.length > 0;
-}; */
-
 const checkDiagonal = (array) => {
   const isDiagLeftFull = array.filter((cell) => {
     const example = [[1, 1], [2, 2], [3, 3]];
