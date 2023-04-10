@@ -12,12 +12,9 @@ test('cteateCell', () => {
   expect(createCell(1)).toMatchObject({ row: 1, column: undefined });
 });
 
-test('getRow', () => {
+test('getRowColumn', () => {
   expect(getRow(createCell(1, 1))).toEqual(1);
   expect(getRow(createCell(2, 2))).toEqual(2);
-});
-
-test('getColumn', () => {
   expect(getColumn(createCell(1, 3))).toEqual(3);
   expect(getColumn(createCell(3, 3))).toEqual(3);
 });
