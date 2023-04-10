@@ -2,8 +2,7 @@ import {
   createCell,
   getRow,
   getColumn,
-  checkRows,
-  checkColumns,
+  checkRowsColumns,
   checkDiagonal,
 } from '../game_logic/interfaces.js';
 
@@ -23,29 +22,26 @@ test('getColumn', () => {
   expect(getColumn(createCell(3, 3))).toEqual(3);
 });
 
-test('checkRows', () => {
+test('checkRowsColumns', () => {
   expect(
-    checkRows([createCell(1, 1), createCell(1, 2), createCell(1, 3)]),
+    checkRowsColumns([createCell(1, 1), createCell(1, 2), createCell(1, 3)]),
   ).toEqual(true);
   expect(
-    checkRows([createCell(1, 1), createCell(2, 1), createCell(1, 3)]),
+    checkRowsColumns([createCell(1, 1), createCell(2, 1), createCell(1, 3)]),
   ).toEqual(false);
-  expect(checkRows([createCell(1, 1), createCell(1, 3)])).toEqual(false);
+  expect(checkRowsColumns([createCell(1, 1), createCell(1, 3)])).toEqual(false);
   expect(
-    checkRows([createCell(1, 1), createCell(1, 1), createCell(1, 1)]),
-  ).toEqual(true);
-});
-
-test('checkColumns', () => {
-  expect(
-    checkColumns([createCell(1, 3), createCell(2, 3), createCell(3, 3)]),
+    checkRowsColumns([createCell(1, 1), createCell(1, 1), createCell(1, 1)]),
   ).toEqual(true);
   expect(
-    checkColumns([createCell(1, 1), createCell(2, 1), createCell(3, 2)]),
+    checkRowsColumns([createCell(1, 3), createCell(2, 3), createCell(3, 3)]),
+  ).toEqual(true);
+  expect(
+    checkRowsColumns([createCell(1, 1), createCell(2, 1), createCell(3, 2)]),
   ).toEqual(false);
-  expect(checkColumns([createCell(1, 1), createCell(2, 1)])).toEqual(false);
+  expect(checkRowsColumns([createCell(1, 1), createCell(2, 1)])).toEqual(false);
   expect(
-    checkColumns([createCell(1, 1), createCell(1, 1), createCell(1, 1)]),
+    checkRowsColumns([createCell(1, 1), createCell(1, 1), createCell(1, 1)]),
   ).toEqual(true);
 });
 
@@ -55,15 +51,5 @@ test('checkDiagonal', () => {
   ).toEqual(true);
   expect(
     checkDiagonal([createCell(1, 3), createCell(2, 2), createCell(3, 1)]),
-  ).toEqual(true);
-  expect(
-    checkColumns([createCell(1, 1), createCell(2, 2), createCell(1, 3)]),
-  ).toEqual(false);
-  expect(
-    checkColumns([createCell(1, 3), createCell(2, 2), createCell(3, 3)]),
-  ).toEqual(false);
-  expect(checkColumns([createCell(1, 3), createCell(2, 2)])).toEqual(false);
-  expect(
-    checkColumns([createCell(1, 3), createCell(1, 3), createCell(1, 3)]),
   ).toEqual(true);
 });

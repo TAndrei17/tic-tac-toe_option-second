@@ -1,11 +1,10 @@
-import { checkRows, checkColumns, checkDiagonal } from './interfaces.js';
-import { createFinalDiv, createButtonReload } from './5_final.js';
+import { checkRowsColumns, checkDiagonal } from './interfaces.js';
+import { createFinalDiv, createButtonReload } from './4_create_final.js';
 
 const isWinner = (array) => {
-  const isThreeInRow = checkRows(array);
-  const isThreeInColumn = checkColumns(array);
+  const isThreeInRowCol = checkRowsColumns(array);
   const isThreeInDiagonal = checkDiagonal(array);
-  return (isThreeInRow || isThreeInColumn || isThreeInDiagonal);
+  return (isThreeInRowCol || isThreeInDiagonal);
 };
 
 const showWinner = (player, elem1, elem2) => {

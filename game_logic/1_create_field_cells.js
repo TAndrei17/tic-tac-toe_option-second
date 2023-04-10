@@ -5,7 +5,7 @@ const createField = () => {
     const str = tableAll.insertRow();
     str.classList.add('row');
     for (let j = 1; j < 4; j += 1) {
-      const cell = str.insertCell(); // как ячейку сделать объектом?
+      const cell = str.insertCell();
       cell.classList.add('cell');
       cell.row = i;
       cell.column = j;
