@@ -2,21 +2,21 @@ const createCell = (row, column) => ({ row, column });
 const getRow = (cell) => cell.row;
 const getColumn = (cell) => cell.column;
 
-const checkRowsColumns = (array) => {
-  const calcColumnsInRow = array.reduce((acc, cell) => {
-    const row = getRow(cell);
-    acc[row] = acc[row] ? acc[row] + 1 : 1;
+const calculateItems = (array, item) => {
+  const checkItems = array.reduce((acc, cell) => {
+    const numItem = (item === 'row') ? getRow(cell) : getColumn(cell);
+    acc[numItem] = acc[numItem] ? acc[numItem] + 1 : 1;
     return acc;
   }, {});
+  return checkItems;
+};
+
+const checkRowsColumns = (array) => {
+  const calcColumnsInRow = calculateItems(array, 'row');
   const isRowFull = Object.keys(calcColumnsInRow).filter(
     (item) => calcColumnsInRow[item] === 3,
   );
-
-  const calcRowsInColumn = array.reduce((acc, cell) => {
-    const column = getColumn(cell);
-    acc[column] = acc[column] ? acc[column] + 1 : 1;
-    return acc;
-  }, {});
+  const calcRowsInColumn = calculateItems(array, 'column');
   const isColumnFull = Object.keys(calcRowsInColumn).filter(
     (item) => calcRowsInColumn[item] === 3,
   );
