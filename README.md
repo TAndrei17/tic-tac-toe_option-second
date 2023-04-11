@@ -6,6 +6,20 @@
 
 It is my second project as a front-end developer. My purpose was to apply my skills and knowledge which I have received in the process of self-studying at the online-school ['Hexlet'](https://hexlet.io/my "Hexlet's page") for first 4 months.
 
+## Installation
+
+```sh
+git clone git@github.com:TAndrei17/tic-tac-toe_option-second.git
+make install
+```
+
+## Check code
+
+```sh
+make test
+make lint
+```
+
 - Created a npm-package and installed eslint/prettier/jest;
 - Created updated JS-code myself without copy & paste;
 - Polished my skills on Git/GitHub and the command line.
