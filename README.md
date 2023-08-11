@@ -1,4 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/ebc375e1de549ea1fe6d/maintainability)](https://codeclimate.com/github/TAndrei17/tic-tac-toe_option-second/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ebc375e1de549ea1fe6d/maintainability)](https://codeclimate.com/github/TAndrei17/tic-tac-toe_option-second/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/ebc375e1de549ea1fe6d/test_coverage)](https://codeclimate.com/github/TAndrei17/tic-tac-toe_option-second/test_coverage)
 
 # The-game. Tic-Tac-Toe. Option 2
 
