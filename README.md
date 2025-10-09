@@ -1,8 +1,8 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/ebc375e1de549ea1fe6d/maintainability)](https://codeclimate.com/github/TAndrei17/tic-tac-toe_option-second/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/ebc375e1de549ea1fe6d/test_coverage)](https://codeclimate.com/github/TAndrei17/tic-tac-toe_option-second/test_coverage)
+[![Maintainability](https://qlty.sh/gh/TAndrei17/projects/tic-tac-toe_option-second/maintainability.svg)](https://qlty.sh/gh/TAndrei17/projects/tic-tac-toe_option-second) [![Code Coverage](https://qlty.sh/gh/TAndrei17/projects/tic-tac-toe_option-second/coverage.svg)](https://qlty.sh/gh/TAndrei17/projects/tic-tac-toe_option-second)
 
 # The-game. Tic-Tac-Toe. Option 2
 
-['Tic-Tac-Toe' is a simple game for two people on one field.](https://tandrei17.github.io/tic-tac-toe_option-second/ "To GitHub pages")
+['Tic-Tac-Toe' is a simple game for two people on one field.](https://tandrei17.github.io/tic-tac-toe_option-second/ 'To GitHub pages')
 
 It is my second project as a front-end developer. My purpose was to apply my skills and knowledge which I have received in the process of self-studying at the online-school ['Hexlet'](https://hexlet.io/my "Hexlet's page") for first 4 months.
 

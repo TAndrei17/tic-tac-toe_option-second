@@ -3,15 +3,18 @@ name: Node CI
 
 # Trigger the workflow on push or pull request
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 env:
   CI: true
 
 jobs:
   build:
-
     # The type of machine to run the job on
     runs-on: ubuntu-latest
 
@@ -21,8 +24,8 @@ jobs:
         node-version: [16.x, 17.x, 18.x]
 
     steps:
-        # Check-out repository under GitHub workspace
-        # https://github.com/actions/checkout
+      # Check-out repository under GitHub workspace
+      # https://github.com/actions/checkout
       - uses: actions/checkout@v3
         # Step's name
       - name: Use Node.js ${{ matrix.node-version }}
@@ -36,13 +39,12 @@ jobs:
       - run: make install
       - run: make lint
       - run: make test
+      - run: make test-coverage
+
       - name: Test & publish code coverage
-        # Publish code coverage on Code Climate
-        # https://github.com/paambaati/codeclimate-action
-        uses: paambaati/codeclimate-action@v4.0.0
-        # Add Code Climate secret key
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        uses: qltysh/qlty-action/coverage@v2
         with:
-          coverageCommand: make test-coverage
-          debug: true
+          token: ${{ secrets.QLTY_COVERAGE_TOKEN }}
+          files: coverage/lcov.info
+        env:
+          GITHUB_ACTIONS_TMP_PATH: ${{ runner.temp }}
